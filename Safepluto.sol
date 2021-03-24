@@ -1,9 +1,9 @@
 /**
- *Submitted for verification at BscScan.com on 2021-03-01
+ *Submitted for verification at BscScan.com on 2021-03-24
 */
 
 /**
- *Submitted for verification at BscScan.com on 2021-03-01
+ *Submitted for verification at BscScan.com on 2021-03-24
 */
 
 /**
@@ -12,9 +12,9 @@
    
    #LIQ+#RFI+#SHIB+#DOGE = #BEE
 
-   #SAFEMOON features:
+   #SAFEPLUTO features:
    3% fee auto add to the liquidity pool to locked forever when selling
-   2% fee auto distribute to all holders
+   3% fee auto distribute to all holders
    I created a black hole so #Bee token will deflate itself in supply with every transaction
    50% Supply is burned at start.
    
@@ -701,7 +701,7 @@ interface IUniswapV2Router02 is IUniswapV2Router01 {
 }
 
 
-contract SafeMoon is Context, IERC20, Ownable {
+contract SafePluto is Context, IERC20, Ownable {
     using SafeMath for uint256;
     using Address for address;
 
@@ -719,8 +719,8 @@ contract SafeMoon is Context, IERC20, Ownable {
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
     uint256 private _tFeeTotal;
 
-    string private _name = "SafeMoon";
-    string private _symbol = "SAFEMOON";
+    string private _name = "SafePluto";
+    string private _symbol = "SAFEPLUTO";
     uint8 private _decimals = 9;
     
     uint256 public _taxFee = 5;
@@ -906,7 +906,7 @@ contract SafeMoon is Context, IERC20, Ownable {
    
     function setMaxTxPercent(uint256 maxTxPercent) external onlyOwner() {
         _maxTxAmount = _tTotal.mul(maxTxPercent).div(
-            10**2
+            10**3
         );
     }
 
@@ -971,13 +971,13 @@ contract SafeMoon is Context, IERC20, Ownable {
     
     function calculateTaxFee(uint256 _amount) private view returns (uint256) {
         return _amount.mul(_taxFee).div(
-            10**2
+            10**3
         );
     }
 
     function calculateLiquidityFee(uint256 _amount) private view returns (uint256) {
         return _amount.mul(_liquidityFee).div(
-            10**2
+            10**3
         );
     }
     
